@@ -1,7 +1,7 @@
 public class Particle {
-    /* I first declare the particle's position and velocity. This will be the store for the most
-     * basic data in my physics engine. Everything will be built around this particle class'
-     * position and velocity vectors */
+    /* I first declare the particle's position and velocity. This will be the store for the
+     * most basic data in my physics engine. Everything will be built around this particle
+     * class' position and velocity vectors */
     protected Vector2 position;
     protected Vector2 velocity;
 
@@ -12,7 +12,9 @@ public class Particle {
     }
 
     /* this method is called proportionally to the frame-rate, likely 1:1. it is prefixed
-    *  with "particle" because this class will only be inherited by others */
+    *  with "particle" because this class will almost exclusively be inherited by others
+    *  so when I'm writing a class which will have its own physics tick, I will not need
+    *  to worry about overriding and/or rewriting code. */
     public void particle_physics_tick(float deltaT) {
 
         // integrate velocity by acceleration ((0, -1) is a placeholder for now)
